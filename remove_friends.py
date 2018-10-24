@@ -2,11 +2,13 @@ from selenium import webdriver
 import time
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.support.ui import Select
+import os
 
 
 
 
-driver_path = "/Users/rajat/Downloads/chromedriver 5"
+
+driver_path = os.getcwd() + "/chromedriver5"
 driver = webdriver.Chrome(driver_path)
 driver.get("https://www.goodreads.com/")
 time.sleep(10)
