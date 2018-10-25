@@ -7,7 +7,6 @@ import os
 
 
 
-
 driver_path = os.getcwd() + "/chromedriver5"
 driver = webdriver.Chrome(driver_path)
 driver.get("https://www.goodreads.com/")
@@ -16,7 +15,7 @@ time.sleep(10)
 elem = driver.find_element_by_id('userSignInFormEmail')
 elem.send_keys('devashish.mulye@gmail.com')
 elem2 = driver.find_element_by_xpath('//*[@id="user_password"]')
-elem2.send_keys("Timbaktu13!")
+elem2.send_keys("freshfruit")
 
 sign_in_elem = driver.find_element_by_xpath('//*[@id="sign_in"]/div[3]/input[1]')
 sign_in_elem.click()
@@ -40,7 +39,7 @@ for i in range(0,0):
     try:
         del_friend = driver.find_element_by_xpath('/html/body/div[2]/div[3]/div[1]/div[1]/div[3]/div[{}]/div[4]/div'.format(str(friend_number)))
     except NoSuchElementException:
-        'No Such Element Bruf'
+        print 'No Such Element Bruf'
         break
 
     elem_with_name = driver.find_element_by_xpath('/html/body/div[2]/div[3]/div[1]/div[1]/div[3]/div[{}]/div[1]/a[1]'.format(str(friend_number)))
